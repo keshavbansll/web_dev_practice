@@ -6,26 +6,40 @@
     <title>Assignements</title>
 </head>
 <body>
-    <h2>Registration Form</h2>
     <form action="/action">
-        <div>
-            <input type="text" id="fname" name="fname" placeholder="First Name">
-            <input type="text" id="lname" name="lname" placeholder="Last Name">
-        </div>
-        <div>
-            <label for="gender">Please select your gender: </label>
-            <select name="gen" id="gender">
-                <option value="M">Male</option>
-                <option value="F">Female</option>
-                <option value="O">Others</option>
-            </select>
-        </div>
-        <div>
-            Do you agree to all terms of service?
-            <input type="checkbox" name="terms" id="terms">
-            <label for="terms">Yes, I agree</label>
-        </div>
-        <button type="submit">Register</button>
+      <div>
+          <label for="name">Name: </label>
+            <input type="text">
+      </div>
+      <br>
+      <div>
+        Sex: 
+        <input type="radio" name="gen" id="male" value="M">
+        <label for="male">Male</label>
+        <input type="radio" name="gen" id="female" value="F">
+        <label for="female">Female</label>
+      </div>
+      <br>
+      <div>
+        Country: 
+        <select name="coun" id="country">
+            <option value="">--Select an option--</option>
+            <option value="India">India</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label for="message">Message: </label>
+        <br>    
+        <textarea id="message" name="mess" rows="3" cols="25"></textarea>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" id="subscribe" name="sub">
+        <label for="subscribe">Subscribe?</label>
+      </div>
+      <br>
+      <button type="submit">Submit</button>
     </form>
 </body>
 </html>
