@@ -1,11 +1,32 @@
-h1{
-    color: #ffa511;
+body{
+    background-color: wheat;
     text-align: center;
-    text-transform: uppercase;
-    font-family: "League Spartan", sans-serif;
-    font-size: 55px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    line-height: 1.5;
-    text-decoration: double teal underline;
+    font-family: Georgia, serif;
+}
+
+span{
+    text-decoration: underline;
+}
+
+h3{
+    color: black;
+}
+
+a{
+    color: rgb(0,255,0);
+    text-decoration: none;
+}
+
+button{
+    background-color: white;
+    color: blueviolet;
+}
+
+textarea{
+    color: #000;
+}
+
+p{
+    color: red;
+    line-height: 30px;
 }
