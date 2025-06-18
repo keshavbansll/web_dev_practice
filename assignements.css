@@ -1,32 +1,17 @@
-body{
-    background-color: wheat;
-    text-align: center;
-    font-family: Georgia, serif;
+*{
+    font-family: 'Courier New';
 }
 
-span{
-    text-decoration: underline;
+h1{
+    color: #0866ff;
 }
 
-h3{
-    color: black;
+.userbtn{
+    background-color: #0866ff;
+    color: white;
 }
 
-a{
-    color: rgb(0,255,0);
-    text-decoration: none;
-}
-
-button{
-    background-color: white;
-    color: blueviolet;
-}
-
-textarea{
-    color: #000;
-}
-
-p{
-    color: red;
-    line-height: 30px;
+#searchbtn{
+    background-color: black;
+    color: white;
 }
