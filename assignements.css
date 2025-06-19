@@ -1,17 +1,38 @@
 *{
-    font-family: 'Courier New';
+    text-align: center;
 }
 
-h1{
-    color: #0866ff;
+#mainTopic{
+    color: blue;
 }
 
-.userbtn{
-    background-color: #0866ff;
+h1, h3, h5{
+    font-family: Georgia;
+}
+
+h1::first-letter{
+    color: red;
+}
+
+.content{
+    background-color: cornflowerblue;
     color: white;
 }
 
-#searchbtn{
-    background-color: black;
-    color: white;
+div button{
+    background-color: purple;
+    color: azure;
+}
+
+button:hover{
+    background-color: yellow;
+    color: blue;
+}
+
+p:nth-of-type(2n+1){
+    color: yellow;
+}
+
+#yes:checked + label {
+    color: darkgreen;
 }
