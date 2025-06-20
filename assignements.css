@@ -1,38 +1,32 @@
-*{
-    text-align: center;
+.traffic_light{
+    height: 200px;
+    width: 70px;
+    border: 2px solid black;
 }
 
-#mainTopic{
-    color: blue;
+.red{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 10px;
 }
 
-h1, h3, h5{
-    font-family: Georgia;
-}
-
-h1::first-letter{
-    color: red;
-}
-
-.content{
-    background-color: cornflowerblue;
-    color: white;
-}
-
-div button{
-    background-color: purple;
-    color: azure;
-}
-
-button:hover{
+.yellow{
+    height: 50px;
+    width: 50px;
     background-color: yellow;
-    color: blue;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 10px;
 }
 
-p:nth-of-type(2n+1){
-    color: yellow;
-}
-
-#yes:checked + label {
-    color: darkgreen;
+.green{
+    height: 50px;
+    width: 50px;
+    background-color: green;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 10px;
 }
