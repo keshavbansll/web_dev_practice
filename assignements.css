@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: "inter", sans-serif;
+    box-sizing: border-box;
 }
 
 .main_box  {
@@ -11,118 +12,150 @@
     background-size: cover;
     position: relative;
     height: 100vh;
+    overflow-x: hidden;
 }
+
+/* Hamburger menu button */
 
 .btn_one i {
     color: white;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 700;
-    position: absolute;
-    top: 50px;
-    left: 25px;
-    line-height: 80px;
-    z-index: 5;
+    position: fixed;
+    top: 25px;
+    left: 20px;
+    line-height: 50px;
+    z-index: 1000;
     cursor: pointer;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
+    padding: 10px;
 }
+
+/* Sidebar container */
 
 .sidebar_menu {
     position: fixed;
     top: 5%;
-    transform: translateX(-120%);
+    transform: translateX(-100%);
     height: 90vh;
-    width: 25% ;
+    width: 420px ;
+    max-width: 85vw;
     background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.3);
     border-radius: 25px;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    overflow-y: auto;
 }
 
 .sidebar_menu .logo {
-    position: absolute;
+    position: relative;
     width: 100%;
-    line-height: 60px;
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .sidebar_menu .logo a {
-    position: absolute;
     color: white;
     text-decoration: none;
-    font-size: 2rem;
-    font-weight: 500;
-    left: 18%;
-    padding-top: 10px;
+    font-size: 1.8rem;
+    font-weight: 600px;
+    display: block;
+    text-align: center;
 }
 
+.sidebar_menu .btn_two i {
+    color: gray;
+    font-size: 24px;
+    position: absolute;
+    cursor: pointer;
+    top: 15px;
+    right: 20px;
+    opacity: 1;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.sidebar_menu .btn_two i:hover {
+    color: #cbcbcb;
+}
+
+/* Menu Container */
+
 .sidebar_menu .menu {
+    list-style: none;
     position: absolute;
     left: 2%;
     width: 95%;
     top: 10%;
 }
 
-.sidebar_menu .btn_two i {
-    color: gray;
-    font-size: 30px;
-    line-height: 80px;
-    position: absolute;
-    cursor: pointer;
-    left: 25px;
-    opacity: 0;
-    opacity: 0;
-}
-
 .sidebar_menu .menu li {
     cursor: pointer;
-    margin-top: 1em;
+    margin-bottom: 8px;
     padding: 15px 20px;
-    border-radius: 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
 }
 
-.sidebar_menu .menu i, a {
+.sidebar_menu .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateX(5px);
+}
+
+.sidebar_menu .menu a {
     color: white;
     text-decoration: none;
     font-size: 1.5em;
+    font-weight: 500;
+    flex: 1;
 }
 
 .sidebar_menu .menu i {
-    padding: 0.5rem;
+    color: white;
+    padding: 1.2rem;
+    width: 25px;
+    margin-right: 15px;
 }
 
 .sidebar_menu .social_media {
     position: absolute;
-    left: 30%;
-    bottom: 5%;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
 }
 
 .sidebar_menu .social_media i {
     color: white;
-    opacity: 0.5;
-    padding: 0.3em;
+    font-size: 1.2rem;
+}
+
+.sidebar_menu .social_media a {
+    display: inline-block;
+    padding: 10px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.sidebar_menu .social_media a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
 #check {
     display: none;
 }
 
-.sidebar_menu .menu li:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-.sidebar_menu .social_media i:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
 #check:checked ~ .sidebar_menu{
-    transform: translateX(0);
+    transform: translateX(5%);
 }
 
 #check:checked ~ .btn_one i {
     opacity: 0;
-}
-
-#check:checked ~ .sidebar_menu .btn_two i {
-    opacity: 1;
+    pointer-events: none;
 }
