@@ -143,8 +143,24 @@
 }
 
 .sidebar_menu .social_media a:hover{
-    background-color: rgba(0, 0, 0, 0.3);
-    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1)
+}
+
+.sidebar_menu .social_media a .fa-facebook:hover{
+    color: rgb(23, 99, 207);
+}
+
+.sidebar_menu .social_media a .fa-x-twitter:hover{
+    color: rgb(239, 243, 244);;
+}
+
+.sidebar_menu .social_media a .fa-instagram:hover{
+    color: rgb(255, 28, 198);
+}
+
+.sidebar_menu .social_media a .fa-youtube:hover{
+    color: red;
 }
 
 #check {
