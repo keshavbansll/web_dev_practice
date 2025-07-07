@@ -1,23 +1,11 @@
-let size = "L";
+//Ques: A "good string" is a string that starts with the letter "a" & has a length > 3. Write a program to find if a string is good or not.
 
-//Popcorn price system
+let str = "apple";
 
-if (size == "XL") {
-    console.log("250");
-}
-
-else if (size == "L") {
-    console.log("200");
-}
-
-else if (size == "M") {
-    console.log("100");
-}
-
-else if (size == "S") {
-    console.log("50");
+if ((str[0] === 'a') && (str.length >3)) {
+    console.log("Good string");
 }
 
 else {
-    console.log("Not Available")
+    console.log("Not a good string");
 }
