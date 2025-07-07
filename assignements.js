@@ -1,11 +1,39 @@
-//Ques: A "good string" is a string that starts with the letter "a" & has a length > 3. Write a program to find if a string is good or not.
+// Use switch statement to print the day of the week using a number variable 'day' with value 1 to 7
 
-let str = "apple";
+let day=2;
 
-if ((str[0] === 'a') && (str.length >3)) {
-    console.log("Good string");
-}
 
-else {
-    console.log("Not a good string");
+switch (day) {
+
+    case 1:
+        console.log("Monday");
+        break;
+
+    case 2:
+        console.log("Tuesday");
+        break;
+
+    case 3:
+        console.log("Wednesday");
+        break;
+
+    case 4:
+        console.log("Thursday");
+        break;
+
+    case 5:
+        console.log("Friday");
+        break;
+
+    case 6:
+        console.log("Saturday");
+        break;
+
+    case 7:
+        console.log("Sunday")
+        break;
+
+    default:
+        console.log("Please enter a valid day")
+
 }
