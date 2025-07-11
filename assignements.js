@@ -1,12 +1,12 @@
-// For the Given string:
-let msg = "help!";
-// Trim it & convert it to uppercase.
+//For the given start state of an array, change the final form using splice.
+let start = ['january', 'july', 'march', 'august'];
+// final: ['july', 'june', 'march', 'august']
 
-console.log(msg.trim().toUpperCase());
+start.splice(0,2,'july','june');
+console.log(start)
 
-// For the string ->
-let name = "ApnaCollege";
-// Seperate the "College" part in above string
-// & replace "l" with "t" in it
+//Return the index of the "javascript" from the given array,
+//if it was reveresed
+let langs = ['c','c++','html','javascript','python','java','c#','sql']
 
-console.log(name.slice(4).replace("l","t"));
+console.log(langs.reverse().indexOf('javascript'))
