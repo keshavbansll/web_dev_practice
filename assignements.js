@@ -1,12 +1,8 @@
-//For the given start state of an array, change the final form using splice.
-let start = ['january', 'july', 'march', 'august'];
-// final: ['july', 'june', 'march', 'august']
+//Create a nested array to show the following tic-tac-toe game state.
+//[img]
 
-start.splice(0,2,'july','june');
-console.log(start)
+let tic = [['X',null,'O'],[null,'X',null],['O',null,'X']];
 
-//Return the index of the "javascript" from the given array,
-//if it was reveresed
-let langs = ['c','c++','html','javascript','python','java','c#','sql']
+//Add O in the empty space in top row
 
-console.log(langs.reverse().indexOf('javascript'))
+tic[0][1] = 'O'
