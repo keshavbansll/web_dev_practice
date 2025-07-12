@@ -1,42 +1,69 @@
-//Todo App
+// Write a JS program to delete all occurences of element 'num' in a given array.
 
-let todo = [];
+let arr1 = [1,2,3,4,5,6,2,3];
 
-let req = prompt("Please enter your request.");
+let num = 3;
 
-while(true) {
-
-    if(req == "quit") {
-        console.log("quitting app");
-        break;
+for (let i=0; i<arr1.length; i++) {
+    if (arr1[i] == num) {
+        arr1.splice(i,1);
     }
-
-    if(req == "list") {
-
-        console.log("-----------------------");
-
-        for (let i=0; i<todo.length; i++) {
-            console.log(i+1, todo[i]);
-        }
-
-        console.log("-----------------------")
-
-    } else if (req == "add") {
-
-        let task = prompt("please enter the task you want to add:");
-
-        todo.push(task);
-        console.log("task added.");
-
-    } else if(req == "delete") {
-
-        let idx = prompt("Please enter the task index");
-        todo.splice(idx-1, 1);
-        console.log("Task deleted.")
-
-    } else {
-        console.log("Wrong request");
-    }
-
-    req = prompt("Please enter your request.");
 }
+
+console.log(arr1);
+
+// Write a JS program to find the no of digits in a number
+
+let number = 534520;
+let count = 0;
+
+let copy = number;
+
+while (copy>0) {
+    count++;
+    copy = Math.floor(copy/10);
+}
+
+console.log(count);
+
+// Write a JS program to find the sum of digits in a number
+
+let num2 = 325141;
+let sum = 0;
+
+let copy2 = num2;
+
+while (copy2 > 0) {
+
+    digit = copy2 % 10;
+    sum += digit;
+    copy2 = Math.floor(copy2/10);
+}
+
+console.log(sum);
+
+// Print the factorial of a number n.
+//[Factorial of a number n is the product of all positive integers less than
+// or equal to a given positive integer and denoted by that integer. ]
+
+let num3 = 5;
+let factorial = 1;
+
+for (let i=1; i <= num3; i++) {
+    factorial *= 1;
+}
+
+console.log(`factorial of ${num3} is ${factorial}`);
+
+// Find the largest number in an array with only positive numbers.
+
+let arr2 = [2,5,10,4,2,7,1,9];
+let largest = 0;
+
+for (let i=0; i < arr2.length; i++) {
+    if (largest < arr2[i]) {
+        largest = arr2[i];
+    }
+}
+
+console.log("Largest number is", largest);
