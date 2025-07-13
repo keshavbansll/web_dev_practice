@@ -50,6 +50,10 @@ while (true) {
                 alert("Invalid input. Returning to game...");
             }
 
+        } else if (guess < random) {
+            alert("Your guess is smaller than the random number. Please try again.");
+        } else if (guess > random) {
+            alert("Your guess is larger than the random number. Please try again.");
         } else {
             alert("Wrong guess. Try again.")
         }
