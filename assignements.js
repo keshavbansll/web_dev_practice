@@ -1,67 +1,33 @@
-// Guessing Game
-// User enters a max number & then tries to guess a random
-// generated number between 1 & max.
+// Create a program that generates a random number representing a dice roll.
+// [The number should be between 1 and 6].
 
-while (true) {
+let dice = Math.floor((Math.random()*6)+1);
+console.log(dice);
 
-    const maxInput = prompt("Enter Maximum Value");
+//Create an object representing a car that stores the following properties for the car
+// :name, model, color.
+// Print the car's name.
 
-    if (maxInput === null || maxInput.toLowerCase() === "quit") {
-        console.log("User exited before starting");
-        break;
-    }
+const car = {
+    name: "Aston Martin",
+    model: "Vantage",
+    color: "red"
+};
 
-    let max = parseInt(maxInput);
+console.log(car.name);
 
-    if (isNaN(max) || max <= 0) {
-        alert("Invalid input. Please enter a positive integer.");
-        continue;
-    }
+// Create an object person with their name, age and city.
+// Edit their city's original value to change it to "New York".
+// Add a new property country and set it to the United states.
 
-    const random = Math.floor((Math.random()*max) + 1);
+const person = {
+    name: "Matthew Murdock",
+    age: 37,
+    city: "Manhattan"
+};
 
-    while (true) {
-        let guessInput = prompt(`Guess a number between 1 and ${max}.`);
+person.city = "New York";
+person["country"] = "United States";
 
-        if (guessInput === null || guessInput.toLowerCase() === "quit") {
-
-            console.log(`User quit. The random number was ${random}.`);
-            break;
-
-        }
-
-        let guess = parseInt(guessInput);
-
-        if (isNaN(guess) || guess < 1 || guess > max) {
-            alert(`Please enter a valid number between 1 and ${max}.`)
-            continue;
-        }
-
-        if (guess === random) {
-            let playAgain = prompt("Correst guess! \nType 'play' to play again or 'quit' to exit.");
-
-            if (playAgain && playAgain.toLowerCase() === "play") {
-                console.clear();
-                break;
-            } else if (playAgain && playAgain.toLowerCase() === "quit") {
-                console.log("User chose to quit after a correct guess.");
-                break;
-            } else {
-                alert("Invalid input. Returning to game...");
-            }
-
-        } else if (guess < random) {
-            alert("Your guess is smaller than the random number. Please try again.");
-        } else if (guess > random) {
-            alert("Your guess is larger than the random number. Please try again.");
-        } else {
-            alert("Wrong guess. Try again.")
-        }
-    }
-
-    let confirmPlay = confirm("Do you want to continue playing?");
-    if (!confirmPlay) {
-        console.log("User ended the game.");
-        break;
-    }
-}
+console.log(person.city);
+console.log(person.country);
