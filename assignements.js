@@ -1,8 +1,9 @@
-// Create a function that prints a poem
+// Create a function to roll a dice & always display the value
+// of the dice (1 to 6)
 
-function printPoem() {
-    console.log("Twinkle, twinkle, little star,")
-    console.log("How I wonder what you are!")
+function rollDice() {
+    let diceRoll = Math.floor((Math.random()*6) + 1)
+    console.log(diceRoll)
 }
 
-printPoem()
+rollDice()
