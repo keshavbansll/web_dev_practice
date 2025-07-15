@@ -1,11 +1,13 @@
-// Create a Function that prints the multiplication table of a number
+// Create a Function that returns the sum of numbers from 1 to n.
 
-n = parseInt(prompt("What number's table do you want to print?"))
+n = parseInt(prompt("What is n? "))
 
-function printTable() {
-    for (let i=n; i<=n*10; i+=n)
-        console.log(i)
+function getSum(n)  {
+    let sum = 0;
+    for (let i = 1; i <=n; i++) {
+        sum += i;
+    }
+    return sum
 }
 
-console.log("Here is the requested table")
-printTable(n)
+console.log(getSum(n))
