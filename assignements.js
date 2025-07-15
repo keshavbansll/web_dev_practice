@@ -1,11 +1,11 @@
-// Create a Function that gives us the average of 3 numbers.
+// Create a Function that prints the multiplication table of a number
 
-function calcAverage(a, b, c) {
-    console.log((a + b + c)/3)
+n = parseInt(prompt("What number's table do you want to print?"))
+
+function printTable() {
+    for (let i=n; i<=n*10; i+=n)
+        console.log(i)
 }
 
-a = parseInt(prompt("What's a? "))
-b = parseInt(prompt("What's b? "))
-c = parseInt(prompt("What's c? "))
-
-calcAverage(a, b, c)
+console.log("Here is the requested table")
+printTable(n)
