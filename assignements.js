@@ -1,13 +1,15 @@
-// Create a Function that returns the sum of numbers from 1 to n.
+// Create a Function that returns the concatenation of all strings in an array.
 
-n = parseInt(prompt("What is n? "))
+strings = ["Hello", "World", "My", "Name", "is", "Keshav"];
 
-function getSum(n)  {
-    let sum = 0;
-    for (let i = 1; i <=n; i++) {
-        sum += i;
+function concatStr(strings) {
+    let result = "";
+    
+    for (let str of strings) {
+        result += str;
     }
-    return sum
+
+    return result
 }
 
-console.log(getSum(n))
+console.log(concatStr(strings))
