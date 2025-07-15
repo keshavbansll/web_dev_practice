@@ -1,9 +1,11 @@
-// Create a function to roll a dice & always display the value
-// of the dice (1 to 6)
+// Create a Function that gives us the average of 3 numbers.
 
-function rollDice() {
-    let diceRoll = Math.floor((Math.random()*6) + 1)
-    console.log(diceRoll)
+function calcAverage(a, b, c) {
+    console.log((a + b + c)/3)
 }
 
-rollDice()
+a = parseInt(prompt("What's a? "))
+b = parseInt(prompt("What's b? "))
+c = parseInt(prompt("What's c? "))
+
+calcAverage(a, b, c)
