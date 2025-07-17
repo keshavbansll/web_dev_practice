@@ -1,22 +1,18 @@
-// Write a JavaScript function that accepts a list of country names as input and returns
-// the longest country name as output.
+//Write a JavaScript function to count the number of vowels in a String argument.
 
-let country = ["Australia","Germany","United States of America"];
+let str = "Hello, how are you?";
 
-function longestName(list) {
+function countVowels(str) {
+    let count = 0;
+    const vowels = ['a','e','i','o','u']
 
-    let idx = 0;
-
-    for ( let i = 0; i <list.length; i++) {
-        let length = list[idx].length;
-        let currLen = list[i].length;
-
-        if (currLen > length) {
-            idx = i
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i].toLowerCase())) {
+            count++;
         }
-    };
+    }
 
-    return list[idx];
+    return count;
 }
 
-console.log(longestName(country));
+console.log(countVowels(str))
