@@ -1,22 +1,22 @@
-// Write a JavaScript function to extract unique characters from a string.
-//Example: str = "abcdabcdefgggh"
-//         ans = "abcdefgh"
+// Write a JavaScript function that accepts a list of country names as input and returns
+// the longest country name as output.
 
-let str = "abcdabcdefgggh";
+let country = ["Australia","Germany","United States of America"];
 
-function uniqueStr(str) {
-    let uniqueStr = "";
+function longestName(list) {
 
-    for (let i = 0; i < str.length; i++) {
+    let idx = 0;
 
-        let char = str[i];
+    for ( let i = 0; i <list.length; i++) {
+        let length = list[idx].length;
+        let currLen = list[i].length;
 
-        if (!(uniqueStr.includes(char))) {
-            uniqueStr = uniqueStr + char;
+        if (currLen > length) {
+            idx = i
         }
-    }
+    };
 
-    return uniqueStr;
+    return list[idx];
 }
 
-console.log(uniqueStr(str));
+console.log(longestName(country));
