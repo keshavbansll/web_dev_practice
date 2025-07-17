@@ -1,14 +1,4 @@
-// Write an arrow function named arrayAverage that accepts an array of numbers and returns
-// the average of those numbers.
+// Write an arrow function named isEven() that takes single number as argument and returns
+// if it is even or not
 
-arrayNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-let arrayAverage = (array) => {
-  let sum = 0;
-  for (num of array) {
-    sum = sum + num;
-  }
-  return sum / array.length;
-};
-
-console.log(arrayAverage(arrayNum));
+let isEven = (n) => n % 2 == 0;
