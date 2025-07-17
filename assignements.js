@@ -1,18 +1,12 @@
-//Write a JavaScript function to count the number of vowels in a String argument.
+//Write a JavaScript function to generate a random number within a range(start,end)
 
-let str = "Hello, how are you?";
+let start = 1;
+let end = 10;
 
-function countVowels(str) {
-    let count = 0;
-    const vowels = ['a','e','i','o','u']
+function randomBetween(start,end) {
+    let diff = end - start;
+    let randomNumber = Math.floor(Math.random()*diff) + start;
+    return randomNumber; 
+};
 
-    for (let i = 0; i < str.length; i++) {
-        if (vowels.includes(str[i].toLowerCase())) {
-            count++;
-        }
-    }
-
-    return count;
-}
-
-console.log(countVowels(str))
+console.log(randomBetween(start,end));
