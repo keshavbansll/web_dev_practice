@@ -1,9 +1,14 @@
-// Write a function that prints "Hello World" 5 times at intervals of 2s each.
+// Write an arrow function named arrayAverage that accepts an array of numbers and returns
+// the average of those numbers.
 
-let id = setInterval(() => {
-  console.log("Hello World");
-}, 2000);
+arrayNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-setTimeout(() => {
-  clearInterval(id);
-}, 10000);
+let arrayAverage = (array) => {
+  let sum = 0;
+  for (num of array) {
+    sum = sum + num;
+  }
+  return sum / array.length;
+};
+
+console.log(arrayAverage(arrayNum));
