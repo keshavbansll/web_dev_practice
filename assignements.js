@@ -1,19 +1,22 @@
-//Write a JavaScript function that returns array elements larger than a number.
+// Write a JavaScript function to extract unique characters from a string.
+//Example: str = "abcdabcdefgggh"
+//         ans = "abcdefgh"
 
-let arr1 = [8,9,1,5,3,2,4,6,2,8,1,7,6,5,9,1,3,4,0,2,5,0];
-let num1 = 3;
+let str = "abcdabcdefgggh";
 
-function greaterThan(num, array) {
+function uniqueStr(str) {
+    let uniqueStr = "";
 
-    let greaterThan = [];
+    for (let i = 0; i < str.length; i++) {
 
-    for (n of array) {
-        if (n > num) {
-            greaterThan.push(n);
+        let char = str[i];
+
+        if (!(uniqueStr.includes(char))) {
+            uniqueStr = uniqueStr + char;
         }
     }
 
-    return greaterThan;
+    return uniqueStr;
 }
 
-console.log(greaterThan(num1,arr1));
+console.log(uniqueStr(str));
