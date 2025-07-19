@@ -1,9 +1,17 @@
-// Check if all numbers in our array are multiples or 10 or not.
+// Create a function to find the min number in an array.
 
-let arr = [5, 20, 30, 40, 50];
+function getMin(num) {
+  let min = num.reduce((min, el) => {
+    if (min < el) {
+      return min;
+    } else {
+      return el;
+    }
+  });
 
-let ans = arr.every((num) => {
-  return num % 10 == 0;
-});
+  return min;
+}
 
-console.log(ans);
+let num = [546, 324, 21342, 54, 325, 3453, 32154, 41523452354, 234];
+
+console.log(getMin(num));
