@@ -1,4 +1,9 @@
-// Write an arrow function named isEven() that takes single number as argument and returns
-// if it is even or not
+// Check if all numbers in our array are multiples or 10 or not.
 
-let isEven = (n) => n % 2 == 0;
+let arr = [5, 20, 30, 40, 50];
+
+let ans = arr.every((num) => {
+  return num % 10 == 0;
+});
+
+console.log(ans);
