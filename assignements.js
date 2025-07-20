@@ -1,10 +1,10 @@
-//Create a new array using the map function whose
-//each element is equal to the original element plus 5.
+//Create a new array whose
+//elements are in uppercase of words present in the original array.
 
-org_arr = [0, 5, 25, 102, 56];
+let org_arr = [..."case"];
 
-let new_arr = org_arr.map((num) => {
-  return num + 5;
+let new_arr = org_arr.map((letter) => {
+  return letter.toUpperCase();
 });
 
 console.log(new_arr);
