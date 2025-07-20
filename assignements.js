@@ -1,17 +1,10 @@
-//Square and sum the array elements using the arrow function and then
-//find the average of the array
+//Create a new array using the map function whose
+//each element is equal to the original element plus 5.
 
-arr = [5, 2, 7, 3, 13, 10];
+org_arr = [0, 5, 25, 102, 56];
 
-let square = arr.map((num) => {
-  return num * num;
+let new_arr = org_arr.map((num) => {
+  return num + 5;
 });
 
-console.log(square);
-
-let sum = square.reduce((acc, el) => acc + el, 0);
-
-console.log(sum);
-
-let avg = sum / arr.length;
-console.log(avg);
+console.log(new_arr);
