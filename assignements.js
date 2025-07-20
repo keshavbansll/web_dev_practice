@@ -1,10 +1,19 @@
-//Write a function called doubleAndReturnArgs which accepts an array and
-//a vaiable number of arguments. The function should return a new array with the original
-//array values and all the additional arguments doubled.
+//Write a function called mergeObjects that accepts two objects and returns a new object
+//which contains all the keys and values of the first object and second object.
 
-const doubleAndReturnArgs = (arr, ...args) => [
-  ...arr,
-  ...args.map((v) => v * 2),
-];
+firstObj = {
+  name: "Keshav",
+  age: 18,
+};
 
-doubleAndReturnArgs([1, 2, 3], 4, 4); // [1,2,3,8,8]
+secondObj = {
+  grade: "X",
+  percentage: 91.2,
+};
+
+const mergeObjects = (obj1, obj2) => ({
+  ...obj1,
+  ...obj2,
+});
+
+console.log(mergeObjects(firstObj, secondObj));
