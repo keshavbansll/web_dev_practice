@@ -1,17 +1,17 @@
-// Create a function to find the min number in an array.
+//Square and sum the array elements using the arrow function and then
+//find the average of the array
 
-function getMin(num) {
-  let min = num.reduce((min, el) => {
-    if (min < el) {
-      return min;
-    } else {
-      return el;
-    }
-  });
+arr = [5, 2, 7, 3, 13, 10];
 
-  return min;
-}
+let square = arr.map((num) => {
+  return num * num;
+});
 
-let num = [546, 324, 21342, 54, 325, 3453, 32154, 41523452354, 234];
+console.log(square);
 
-console.log(getMin(num));
+let sum = square.reduce((acc, el) => acc + el, 0);
+
+console.log(sum);
+
+let avg = sum / arr.length;
+console.log(avg);
