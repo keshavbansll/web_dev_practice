@@ -1,21 +1,13 @@
-let btn = document.querySelector("button");
-let heading = document.querySelector("h3");
-let div = document.querySelector("div");
+//Create a button on the page using JavaScript. Add an event listener to the button
+// that changes the button's color to green when it is clicked.
 
-function getRandomColor() {
-  let r = Math.floor(Math.random() * 255);
-  let g = Math.floor(Math.random() * 255);
-  let b = Math.floor(Math.random() * 255);
+let button = document.createElement("button");
+let body = document.querySelector("body");
 
-  let color = `rgb(${r}, ${g}, ${b})`;
-  return color;
-}
+button.innerText = "Click Here!";
 
-btn.addEventListener("click", function () {
-  let randomColor = getRandomColor();
-  heading.innerText = randomColor;
+body.append(button);
 
-  div.style.backgroundColor = randomColor;
-
-  console.log("color updated");
+button.addEventListener("click", function () {
+  this.style.backgroundColor = "green";
 });
