@@ -1,13 +1,13 @@
-//Create a button on the page using JavaScript. Add an event listener to the button
-// that changes the button's color to green when it is clicked.
+//Create an input element on the page with a  placeholder "enter your name" and an H2 heading on the
+//page inside HTML.
+//The purpose of this input element is to enter a user's name so it should only input letters
+//from a-z, A-Z and space (all other characters should not be detected).
+//Whenever the user inputs the name, their input should be dynamically visible inside the heading.
 
-let button = document.createElement("button");
-let body = document.querySelector("body");
+let input = document.querySelector("input");
+let h2 = document.querySelector("h2");
 
-button.innerText = "Click Here!";
-
-body.append(button);
-
-button.addEventListener("click", function () {
-  this.style.backgroundColor = "green";
+input.addEventListener("input", function () {
+  let heading = input.value.replace(/[^a-zA-Z]/, "");
+  h2.innerText = heading;
 });
